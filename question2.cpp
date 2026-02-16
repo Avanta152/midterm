@@ -2,7 +2,17 @@
 #include <string>
 using namespace std;
 
-void StringToCharBuffer(string s, char **c) {
+void StringToCharBuffer(string& s, char **c) {
+    int size = s.length();
+    char *temp = new char[size+1];
+    char* ptr = temp;
+    for (int i=size-1; i>= 0;i--) {
+        *ptr = s[i];
+        ptr++;
+    }
+    *c = temp;
+
+
 
 }
 
