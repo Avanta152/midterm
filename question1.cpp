@@ -21,19 +21,18 @@ node *mysteryAdd(node *head, const int &val) {
 }
 
 node *evenRemove(node *head) {
+
   //base case
   if (!head) return nullptr;
-  //recursion
 
+  //recursion
   head->next = evenRemove(head->next);
   if (head->value %2 == 0) {
-node* temp = head->next;
-delete head;
-return temp;
+    node* temp = head->next;
+    delete head;
+    return temp;
   }
-
-
-   /* Add your code here */
+  return head;
 }
 
 void nodeTest()
@@ -57,6 +56,8 @@ void nodeTest()
     cout << endl;
 }
   int main() {
+
     nodeTest();
+    
     return 0;
   }
