@@ -10,16 +10,12 @@ void StringToCharBuffer(string& s, char **c) {
         *ptr = s[i];
         ptr++;
     }
+    *ptr = '\0';
     *c = temp;
-
-
-
 }
-
 int main()
 {
     char* p;
-
     string s = "!kcoR sredoC";
     StringToCharBuffer(s, &p);
     cout << p << endl;
